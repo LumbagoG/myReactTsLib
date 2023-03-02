@@ -1,6 +1,7 @@
 {
   "name": "@my-react-ts/lib",
-  "private": true,
+  "description": "Моя ui библиотека на react",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
