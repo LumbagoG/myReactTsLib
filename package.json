@@ -9,6 +9,19 @@
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/react-ts-lib.umd.js",
+  "module": "./dist/react-ts-lib.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/react-ts-lib.es.js",
+      "require": "./dist/react-ts-lib.umd.js"
+    }
+  },
   "dependencies": {
     "path": "^0.12.7",
     "react": "^18.2.0",
