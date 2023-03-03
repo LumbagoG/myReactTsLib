@@ -14,6 +14,7 @@ export default defineConfig({
     alias: {
       "@assets": pathResolve("./src/assets"),
       "@styles": pathResolve("./src/assets/styles"),
+      "@lib": pathResolve("./src/lib"),
     }
   },
   build: {
