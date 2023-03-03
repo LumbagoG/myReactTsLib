@@ -1,8 +1,11 @@
 // Библиотеки
 import styled from "styled-components";
 
-// Компонент кнопки
-import {CustomButton, ECustomButtonVariants} from "./CustomButton";
+// Компоненты
+import {CustomButton} from "./CustomButton";
+
+// Enums
+import { ECustomButtonVariants } from "./enums/ECustomButton";
 
 /**
  *  Стилевой компонент кнопки
