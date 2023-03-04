@@ -1,13 +1,13 @@
 import React from "react";
 
-import { CustomButton, ECustomButtonVariants } from "@lib";
+import { CustomButton, ECustomButtonVariants } from "@my-react-ts/lib";
 
 function App() {
     // обработчик нажатия кнопки
     // принимает вариант кнопки
     const onClick = (variant: string) => {
         // выводим сообщение в консоль инструментов разработчика в браузере
-        console.log(`${variant} button clicked`);
+        alert(`${variant} button clicked`);
     };
 
   return (
