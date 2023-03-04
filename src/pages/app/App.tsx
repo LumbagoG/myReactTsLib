@@ -1,6 +1,6 @@
 import React from "react";
 
-import { CustomButton, ECustomButtonVariants } from "@my-react-ts/lib";
+import { CustomButton, ECustomButtonVariants } from "@lib";
 
 function App() {
     // обработчик нажатия кнопки

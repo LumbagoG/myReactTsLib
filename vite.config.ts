@@ -1,13 +1,13 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from "path"
-import dtsPlugin from "vite-plugin-dts"
+import dts from "vite-plugin-dts"
 
 const pathResolve = (src: string) => path.resolve(__dirname, src);
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), dtsPlugin({
+  plugins: [react(), dts({
     insertTypesEntry: true,
   })],
   resolve: {
