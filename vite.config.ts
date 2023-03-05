@@ -7,7 +7,7 @@ const pathResolve = (src: string) => path.resolve(__dirname, src);
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), dts({
+  plugins: [react({ jsxRuntime: "classic" }), dts({
     insertTypesEntry: true,
   })],
   resolve: {
