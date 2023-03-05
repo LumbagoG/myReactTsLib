@@ -1,19 +1,20 @@
 {
   "name": "@lumbagog/my-react-ts-lib",
+  "description": "Моя ui библиотека на react",
+  "version": "0.0.1",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/LumbagoG"
   },
-  "description": "Моя ui библиотека на react",
-  "version": "0.0.1",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\"",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "NODE_OPTIONS=--openssl-legacy-provider start-storybook",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@storybook/addon-docs": "^6.5.16",
     "path": "^0.12.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -21,11 +22,20 @@
     "styled-components": "^5.3.6"
   },
   "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/builder-vite": "^0.4.2",
+    "@storybook/react": "^6.5.16",
+    "@storybook/testing-library": "^0.0.13",
     "@types/node": "^18.14.6",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@types/styled-components": "^5.1.26",
     "@vitejs/plugin-react": "^2.1.0",
+    "babel-loader": "^8.3.0",
     "json": "^11.0.0",
     "sass": "^1.58.3",
     "typescript": "^4.6.4",
