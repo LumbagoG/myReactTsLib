@@ -38,6 +38,7 @@
     "@types/styled-components": "^5.1.26",
     "@vitejs/plugin-react": "^2.1.0",
     "babel-loader": "^8.3.0",
+    "chromatic": "^6.17.1",
     "gh-pages": "^5.0.0",
     "http-server": "^14.1.1",
     "json": "^11.0.0",
