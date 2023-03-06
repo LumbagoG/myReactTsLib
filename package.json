@@ -10,10 +10,11 @@
     "lib-build": "tsc && vite build",
     "lib-build-preview": "vite preview",
     "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\"",
-    "storybook-dev": "NODE_OPTIONS=--openssl-legacy-provider start-storybook",
-    "storybook-build": "NODE_OPTIONS=--openssl-legacy-provider build-storybook",
+    "storybook-dev": "NODE_OPTIONS=--openssl-legacy-provider start-storybook -s public",
+    "storybook-build": "NODE_OPTIONS=--openssl-legacy-provider build-storybook -s public",
     "storybook-build-preview": "npx http-server storybook-static",
-    "storybook-deploy": "gh-pages -d storybook-static"
+    "storybook-deploy-chromatic": "chromatic --project-token=59b7949a76b9 --build-script-name=storybook-build",
+    "storybook-deploy-gh-pages": "rm -rf node_modules/.cache/gh-pages && gh-pages -d storybook-static"
   },
   "dependencies": {
     "path": "^0.12.7",
@@ -52,7 +53,9 @@
   "files": [
     "dist"
   ],
-  "author": "https://github.com/LumbagoG",
+  "author": {
+    "name": "https://github.com/LumbagoG"
+  },
   "bugs": {
     "url": "https://github.com/LumbagoG/myReactTsLib/issues"
   },
@@ -70,5 +73,7 @@
       "import": "./dist/react-ts-lib.es.js",
       "require": "./dist/react-ts-lib.umd.js"
     }
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "@lumbagog/my-react-ts-lib@0.0.1"
 }
