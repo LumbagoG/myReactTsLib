@@ -12,6 +12,8 @@ const config: StorybookConfig & StorybookViteConfig = {
     // Конфиг историй
     stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.tsx"],
 
+    staticDirs: ["../public"],
+
     // Расширения
     addons: [
         {
