@@ -1,35 +1,50 @@
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
-import { CustomButtonStyled, ECustomButtonVariants } from "./";
+// Компонент
+import { CustomButtonStyled, ECustomButtonVariants } from "@lib/button";
 
-// описание компонента и ссылка на него
+// Типы
+import type { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+
+/**
+ * Описание компонента
+ */
 const meta: ComponentMeta<typeof CustomButtonStyled> = {
     title: "Design System/Button",
     component: CustomButtonStyled,
 };
 export default meta;
 
-// истории
-// дефолтная кнопка
+/**
+ * Дефолтная кнопка
+ */
 export const Default: ComponentStoryObj<typeof CustomButtonStyled> = {
     args: {
         children: "primary",
     },
 };
-// заблокированная кнопка
+
+/**
+ * Заблокированная кнопка
+ */
 export const Disabled: ComponentStoryObj<typeof CustomButtonStyled> = {
     args: {
         children: "disabled",
         disabled: true,
     },
 };
-// успех
+
+/**
+ * Успех
+ */
 export const SuccessVariant: ComponentStoryObj<typeof CustomButtonStyled> = {
     args: {
         children: "success bug",
         variant: ECustomButtonVariants.SUCCESS,
     },
 };
-// кнопка с обработчиком нажатия
+
+/**
+ * Кнопка с обработчиком нажатия
+ */
 export const WithClickHandler: ComponentStoryObj<typeof CustomButtonStyled> = {
     args: {
         children: "click me",

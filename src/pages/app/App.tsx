@@ -10,41 +10,43 @@ function App() {
         alert(`${variant} button clicked`);
     };
 
-  return (
-    <div className="App">
-        {/* дефолтная кнопка */}
-        <CustomButton onClick={() => onClick("primary")}>primary</CustomButton>
+    return (
+        <div className="App">
+            {/* дефолтная кнопка */}
+            <CustomButton onClick={() => onClick("primary")}>
+                primary
+            </CustomButton>
 
-        {/* заблокированная кнопка */}
-        <CustomButton onClick={() => onClick("disabled")} disabled>
-            disabled
-        </CustomButton>
-        {/* успех */}
+            {/* заблокированная кнопка */}
+            <CustomButton onClick={() => onClick("disabled")} disabled>
+                disabled
+            </CustomButton>
+            {/* успех */}
 
-        <CustomButton
-            variant={ECustomButtonVariants.SUCCESS}
-            onClick={() => onClick(ECustomButtonVariants.SUCCESS)}
-        >
-            {ECustomButtonVariants.SUCCESS}
-        </CustomButton>
+            <CustomButton
+                variant={ECustomButtonVariants.SUCCESS}
+                onClick={() => onClick(ECustomButtonVariants.SUCCESS)}
+            >
+                {ECustomButtonVariants.SUCCESS}
+            </CustomButton>
 
-        {/* предупреждение */}
-        <CustomButton
-            variant={ECustomButtonVariants.WARNING}
-            onClick={() => onClick(ECustomButtonVariants.WARNING)}
-        >
-            {ECustomButtonVariants.WARNING}
-        </CustomButton>
+            {/* предупреждение */}
+            <CustomButton
+                variant={ECustomButtonVariants.WARNING}
+                onClick={() => onClick(ECustomButtonVariants.WARNING)}
+            >
+                {ECustomButtonVariants.WARNING}
+            </CustomButton>
 
-        {/* опасность */}
-        <CustomButton
-            variant={ECustomButtonVariants.DANGER}
-            onClick={() => onClick(ECustomButtonVariants.DANGER)}
-        >
-            {ECustomButtonVariants.DANGER}
-        </CustomButton>
-    </div>
-  )
+            {/* опасность */}
+            <CustomButton
+                variant={ECustomButtonVariants.DANGER}
+                onClick={() => onClick(ECustomButtonVariants.DANGER)}
+            >
+                {ECustomButtonVariants.DANGER}
+            </CustomButton>
+        </div>
+    );
 }
 
-export default App
+export default App;
