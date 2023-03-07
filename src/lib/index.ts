@@ -1,1 +1,4 @@
-export { CustomButtonStyled as CustomButton, ECustomButtonVariants } from "./button"
+export {
+    CustomButtonStyled as CustomButton,
+    ECustomButtonVariants,
+} from "./button";

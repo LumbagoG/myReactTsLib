@@ -1,8 +1,8 @@
 // Типы
-import {ButtonHTMLAttributes, MouseEventHandler} from "react";
+import type { ButtonHTMLAttributes, MouseEventHandler } from "react";
 
 // Enums
-import { ECustomButtonVariants } from "@lib/button";
+import type { ECustomButtonVariants } from "@lib/button";
 
 /**
  * Типы props компонента кнопки

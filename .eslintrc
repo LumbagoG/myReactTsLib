@@ -25,7 +25,6 @@
         "camelcase": "error",
         "spaced-comment": "error",
         "quotes": ["error", "double"],
-        "no-duplicate-imports": "error",
         "@typescript-eslint/consistent-type-imports": "warn"
     },
     "settings": {

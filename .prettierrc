@@ -2,12 +2,6 @@
   "singleQuote": false,
   "jsxSingleQuote": false,
   "arrowParens": "always",
-  "max-len": ["error", 140, 4],
   "tabWidth": 4,
-  "useTabs": false,
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "jest": true
-  }
+  "useTabs": false
 }
