@@ -16,7 +16,6 @@ export const CustomButtonStyled = styled(CustomButton)`
     );
     border-radius: 6px;
     border: none;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
     color: var(
         ${(props) =>
             props.variant &&
@@ -34,7 +33,7 @@ export const CustomButtonStyled = styled(CustomButton)`
     text-transform: uppercase;
     transition: 0.4s;
 
-    &:not([disabled]):hover {
+    &:not([disabled]) :hover {
         opacity: 0.8;
     }
 

@@ -12,8 +12,12 @@ const config: StorybookConfig & StorybookViteConfig = {
     // Конфиг историй
     stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.tsx"],
 
+    staticDirs: ["../public"],
+
     // Расширения
     addons: [
+        "@storybook/theming",
+        "@storybook/addon-a11y",
         {
             name: "@storybook/addon-docs",
             options: {
@@ -30,6 +34,7 @@ const config: StorybookConfig & StorybookViteConfig = {
     framework: "@storybook/react",
     core: {
         builder: "@storybook/builder-vite",
+        disableTelemetry: true,
     },
     features: {
         storyStoreV7: true,
