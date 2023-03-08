@@ -1,4 +1,4 @@
 export {
     CustomButtonStyled as CustomButton,
     ECustomButtonVariants,
-} from "./button";
+} from "@lib/components/button";
