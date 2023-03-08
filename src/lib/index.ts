@@ -1,4 +1,2 @@
-export {
-    CustomButtonStyled as CustomButton,
-    ECustomButtonVariants,
-} from "@lib/components/button";
+export * from "./components";
+export * from "./styles";
