@@ -1,2 +1,1 @@
-export * from "./mainTheme";
-export * from "./mainColors";
+export * from "./main";
