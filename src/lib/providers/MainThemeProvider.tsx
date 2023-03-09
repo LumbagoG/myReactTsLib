@@ -7,6 +7,7 @@ import type { PropsWithChildren } from "react";
 
 // Тема
 import { mainTheme } from "@lib";
+import GlobalStyle from "@lib/styles/themes/globalStyle";
 
 /**
  * Провайдер основной темы
@@ -14,4 +15,12 @@ import { mainTheme } from "@lib";
  */
 export const MainThemeProvider: React.FC<PropsWithChildren> = ({
     children,
-}) => <ThemeProvider theme={mainTheme}>{children}</ThemeProvider>;
+}) => (
+    <ThemeProvider theme={mainTheme}>
+        {/* Подключаем глобальные стили */}
+        <GlobalStyle />
+
+        {/* Ребенок */}
+        {children}
+    </ThemeProvider>
+);
