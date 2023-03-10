@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { CustomButton } from "./CustomButton";
 
 // Enums
-import { ECustomButtonVariants } from "./enums/ECustomButton";
+import { ECustomButtonVariants } from "@lib/components";
 
 /**
  *  Стилевой компонент кнопки

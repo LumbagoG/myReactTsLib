@@ -5,7 +5,7 @@ import { ThemeProvider } from "styled-components";
 // Типы
 import type { PropsWithChildren } from "react";
 
-// Тема
+// Стили
 import { mainTheme } from "@lib";
 import GlobalStyle from "@lib/styles/themes/globalStyle";
 

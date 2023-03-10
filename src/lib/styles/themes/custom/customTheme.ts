@@ -1,12 +1,12 @@
 // Типы
-import type { TMainColors } from "@lib/styles/themes/main/interfaces";
+import type { TMainColors } from "@lib/styles/themes/main/types";
 
 /**
  * Конфигурируемая тема
  * @param colors
  * @param themeMode
  */
-export const customTheme = (colors: TMainColors, themeMode: any) => {
+export const customTheme = (colors: TMainColors, themeMode: object) => {
     return {
         /**
          * Все Цвета

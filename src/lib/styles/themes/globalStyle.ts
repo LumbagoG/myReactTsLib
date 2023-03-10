@@ -2,7 +2,6 @@
 import { createGlobalStyle, withTheme } from "styled-components";
 
 // Основная тема
-import { mainTheme } from "@lib/styles";
 
 /**
  * Создание глобальных стилей
@@ -16,7 +15,7 @@ const globalStyle = createGlobalStyle`
     }
     
     body {
-        background-color: ${mainTheme().color.gray["900"]};
+        background-color: blanchedalmond;
     }
 `;
 
