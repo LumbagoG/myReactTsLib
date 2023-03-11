@@ -12,14 +12,15 @@ const config: StorybookConfig & StorybookViteConfig = {
     // Конфиг историй
     stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.tsx"],
 
+    // Static dirs
     staticDirs: ["../public"],
 
     // Расширения
     addons: [
-        "@storybook/addon-a11y",
-        "@storybook/addon-actions",
+        "@storybook/addon-a11y", // Тестирование
+        "@storybook/addon-actions", // Консоль с событиями
         {
-            name: "@storybook/addon-docs",
+            name: "@storybook/addon-docs", // Документация
             options: {
                 configureJSX: true,
                 babelOptions: {},
@@ -29,14 +30,13 @@ const config: StorybookConfig & StorybookViteConfig = {
                 transcludeMarkdown: true,
             },
         },
-        "@storybook/addon-essentials",
-        "@storybook/addon-interactions",
-        "@storybook/addon-links",
-        "@storybook/addon-storysource",
-        "@storybook/addon-viewport",
-        "@storybook/addons",
-        "@storybook/theming",
-        "storybook-addon-designs",
+        "@storybook/addon-essentials", // Коллекция дополнений
+        "@storybook/addon-interactions", // Визуальная отладка взаимодействий и тестов
+        "@storybook/addon-links", // Ссылки на истории внутри приложения
+        "@storybook/addon-storysource", // Код истории
+        "@storybook/addon-viewport", // Изменение размеров экрана истории
+        "@storybook/theming", // Управление темами
+        "storybook-addon-designs", // Интеграция с figma
     ],
     framework: "@storybook/react",
     core: {
