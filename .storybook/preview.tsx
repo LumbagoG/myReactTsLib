@@ -1,3 +1,4 @@
+import React from "react";
 // Декоратор темы
 import { withTheme } from "./withTheme.decorator";
 

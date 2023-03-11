@@ -55,10 +55,7 @@ const config: StorybookConfig & StorybookViteConfig = {
     async viteFinal(config) {
         return mergeConfig(config, {
             // @ts-ignore-next-line
-            resolve: (await import("../vite.config")).default.resolve,
-            optimizeDeps: {
-                include: ["storybook-dark-mode"],
-            },
+            resolve: (await import("../vite.config.ts")).default.resolve,
         });
     },
 
