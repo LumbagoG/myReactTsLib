@@ -1,13 +1,14 @@
-// Провайдеры
-import { CustomThemeProvider } from "@lib/providers";
-import { customTheme } from "@lib/styles";
-import { mainColors } from "@lib";
+import React from "react";
+// Декоратор темы
+import { withTheme } from "./withTheme.decorator";
+
+// Стили
+import GlobalStyle from "@lib/styles/themes/globalStyle";
 
 /**
  * Параметры историй
  */
 export const parameters = {
-    viewport: {},
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
         matchers: {
@@ -15,18 +16,14 @@ export const parameters = {
             date: /Date$/,
         },
     },
+    layout: "centered",
 };
 
-/**
- * Глобальный декоратор историй
- * @param Story
- */
-const withGlobalStyle = (Story: any) => {
-    return (
-        <CustomThemeProvider theme={customTheme(mainColors, {})}>
-            <Story />
-        </CustomThemeProvider>
-    );
-};
+const withGlobalStyle = (Story: any) => (
+    <>
+        <GlobalStyle />
+        <Story />
+    </>
+);
 
-export const decorators = [withGlobalStyle];
+export const decorators = [withGlobalStyle, withTheme];

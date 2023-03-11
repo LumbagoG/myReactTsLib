@@ -1,5 +1,5 @@
 // Интерфейсы
-import type { TMainColors } from "../interfaces";
+import type { TMainColors } from "../types";
 
 /**
  * Все цвета основной темы

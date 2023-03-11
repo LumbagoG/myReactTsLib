@@ -3,7 +3,7 @@ import React from "react";
 import type { MouseEventHandler, PropsWithChildren } from "react";
 
 // Enums
-import { ECustomButtonVariants } from "./enums/ECustomButton";
+import { ECustomButtonVariants } from "@lib/components";
 
 // Типы
 import type { TCustomButton } from "./types/TCustomButton";
