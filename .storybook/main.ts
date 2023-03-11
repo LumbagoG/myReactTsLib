@@ -16,31 +16,27 @@ const config: StorybookConfig & StorybookViteConfig = {
 
     // Расширения
     addons: [
+        "@storybook/addon-a11y",
+        "@storybook/addon-actions",
         {
             name: "@storybook/addon-docs",
             options: {
                 configureJSX: true,
                 babelOptions: {},
-                sourceLoaderOptions: null,
-                transcludeMarkdown: true,
-            },
-        },
-        {
-            name: "@storybook/addon-docs",
-            options: {
                 sourceLoaderOptions: {
                     injectStoryParameters: false,
                 },
+                transcludeMarkdown: true,
             },
         },
-        "@storybook/theming",
-        "@storybook/addon-a11y",
-        "@storybook/addon-links",
         "@storybook/addon-essentials",
         "@storybook/addon-interactions",
-        "storybook-addon-designs",
+        "@storybook/addon-links",
+        "@storybook/addon-storysource",
         "@storybook/addon-viewport",
-        "@react-theming/storybook-addon",
+        "@storybook/addons",
+        "@storybook/theming",
+        "storybook-addon-designs",
     ],
     framework: "@storybook/react",
     core: {
@@ -55,19 +51,13 @@ const config: StorybookConfig & StorybookViteConfig = {
     async viteFinal(config) {
         return mergeConfig(config, {
             // @ts-ignore-next-line
-            resolve: (await import("../vite.config.ts")).default.resolve,
+            resolve: (await import("../vite.config.ts"))?.default?.resolve,
         });
     },
 
     // Настройки typescript
     typescript: {
         reactDocgen: "react-docgen-typescript",
-        reactDocgenTypescriptOptions: {
-            compilerOptions: {
-                allowSyntheticDefaultImports: false,
-                esModuleInterop: false,
-            },
-        },
     },
 };
 

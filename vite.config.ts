@@ -3,8 +3,6 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
 import dts from "vite-plugin-dts";
-import eslint from "vite-plugin-eslint";
-import stylelint from "vite-plugin-stylelint";
 
 const pathResolve = (src: string) => path.resolve(__dirname, src);
 
@@ -16,14 +14,6 @@ export default defineConfig({
         react({ jsxRuntime: "classic" }),
         dts({
             insertTypesEntry: true,
-        }),
-        eslint({
-            lintOnStart: true,
-            cache: true,
-            fix: true,
-        }),
-        stylelint({
-            fix: true,
         }),
     ],
     resolve: {
