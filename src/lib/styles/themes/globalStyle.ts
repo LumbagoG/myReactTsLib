@@ -14,8 +14,13 @@ const globalStyle = createGlobalStyle`
         outline: 0;
     }
     
+    html {
+        font-family: "Inter", sans-serif;
+    }
+
     body {
-        background-color: blanchedalmond;
+      width: 100%;
+      height: 100%;
     }
 `;
 

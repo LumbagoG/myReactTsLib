@@ -14,7 +14,7 @@ export const myTheme = create({
     appBorderRadius: 8,
 
     // Типографика
-    fontBase: '"Inter", sans-serif',
+    fontBase: '"Apple", sans-serif',
     fontCode: "monospace",
 
     // Цвета текста
