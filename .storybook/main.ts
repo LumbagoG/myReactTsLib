@@ -37,6 +37,7 @@ const config: StorybookConfig & StorybookViteConfig = {
         "@storybook/addon-viewport", // Изменение размеров экрана истории
         "@storybook/theming", // Управление темами
         "storybook-addon-designs", // Интеграция с figma
+        "storybook-addon-styled-components-themes/register", // Теминг styled-components
     ],
     framework: "@storybook/react",
     core: {

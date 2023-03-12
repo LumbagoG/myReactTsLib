@@ -10,6 +10,7 @@ const pathResolve = (src: string) => path.resolve(__dirname, src);
  * https://vitejs.dev/config/
  */
 export default defineConfig({
+    // Плагины
     plugins: [
         react({ jsxRuntime: "classic" }),
         dts({
@@ -17,21 +18,27 @@ export default defineConfig({
         }),
     ],
     resolve: {
+        // Аллиасы
         alias: {
             "@assets": pathResolve("./src/assets"),
             "@styles": pathResolve("./src/assets/styles"),
             "@lib": pathResolve("./src/lib"),
         },
     },
+
+    // Настройки production сборки
     build: {
+        outDir: "build",
+
+        // Настройки генерации файлов для библиотеки
         lib: {
-            // путь к основному файлу библиотеки
+            // Путь к основному файлу библиотеки
             entry: pathResolve("src/lib/index.ts"),
-            // название библиотеки
+            // Название библиотеки
             name: "ReactTSLib",
-            // форматы генерируемых файлов
+            // Форматы генерируемых файлов
             formats: ["es", "umd"],
-            // названия генерируемых файлов
+            // Названия генерируемых файлов
             fileName: (format) => `react-ts-lib.${format}.js`,
         },
         // https://vitejs.dev/config/build-options.html#build-rollupoptions

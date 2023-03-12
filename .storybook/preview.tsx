@@ -1,14 +1,11 @@
-import React from "react";
 // Декоратор темы
-import { withTheme } from "./withTheme.decorator";
-
-// Стили
-import GlobalStyle from "@lib/styles/themes/globalStyle";
+import { WithThemeDecorator } from "./withTheme.decorator";
+import { Parameters } from "@storybook/react";
 
 /**
  * Параметры историй
  */
-export const parameters = {
+export const parameters: Parameters = {
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
         matchers: {
@@ -19,11 +16,4 @@ export const parameters = {
     layout: "centered",
 };
 
-const withGlobalStyle = (Story: any) => (
-    <>
-        <GlobalStyle />
-        <Story />
-    </>
-);
-
-export const decorators = [withGlobalStyle, withTheme];
+export const decorators = [WithThemeDecorator];

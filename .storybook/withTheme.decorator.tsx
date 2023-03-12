@@ -1,13 +1,18 @@
 // Библиотеки
 import { ThemeProvider } from "styled-components";
 
+// Стили
+import GlobalStyle from "@lib/styles/themes/globalStyle";
+
 /**
  * Глобальный декоратор историй
  * @param Story
+ * @param context
  */
-export const withTheme = (Story: any) => {
+export const WithThemeDecorator = (Story: any) => {
     return (
-        <ThemeProvider theme={{ color: "#000" }}>
+        <ThemeProvider theme={{}}>
+            <GlobalStyle />
             <Story />
         </ThemeProvider>
     );
