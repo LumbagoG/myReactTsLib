@@ -1,7 +1,7 @@
 # .github/workflows/chromatic.yml
 
 # Название процесса
-name: "Chromatic"
+name: "chromatic"
 
 # Событие для процесса
 on: push
