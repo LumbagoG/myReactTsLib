@@ -14,10 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+
       - name: Install dependencies
-        # Менеджер пакетов
         run: npm i
+
       - name: Publish to Chromatic
+        run: chromatic --project-token=59b7949a76b9 --build-script-name=storybook-build
         uses: chromaui/action@v1
 
         # Опции
