@@ -25,3 +25,6 @@ jobs:
         # Опции
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          buildScriptName: storybook-deploy-chromatic
+          debug: true
+          zip: true
