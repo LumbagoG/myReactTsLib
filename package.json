@@ -16,7 +16,7 @@
         "lib-build-preview": "vite preview",
         "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\"",
         "storybook-dev": "npm run linters && NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 5000",
-        "storybook-build": "NODE_OPTIONS=--openssl-legacy-provider build-storybook",
+        "storybook-build": "NODE_OPTIONS=--openssl-legacy-provider build-storybook -s public",
         "storybook-build-preview": "npx http-server storybook-static -p 5005",
         "storybook-deploy-chromatic": "chromatic --project-token=59b7949a76b9 --build-script-name=storybook-build",
         "storybook-deploy-gh-pages": "rm -rf node_modules/.cache/gh-pages && gh-pages -d storybook-static"

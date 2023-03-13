@@ -6,6 +6,7 @@ name: "chromatic"
 # Событие для процесса
 on: push
 
+
 # Список действий
 jobs:
   sb-deployment:
