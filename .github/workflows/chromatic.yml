@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v1
       - name: Install dependencies
         # Менеджер пакетов
-        run: npm
+        run: npm i
       - name: Publish to Chromatic
         uses: chromaui/action@v1
 
