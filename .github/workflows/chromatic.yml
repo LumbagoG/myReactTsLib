@@ -1,0 +1,25 @@
+# .github/workflows/chromatic.yml
+
+# Название процесса
+name: "Chromatic"
+
+# Событие для процесса
+on: push
+
+# Список действий
+jobs:
+  sb-deployment:
+
+    # ОС
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install dependencies
+        # Менеджер пакетов
+        run: npm
+          - name: Publish to Chromatic
+            uses: chromaui/action@v1
+
+            # Опции
+            with:
+              projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
