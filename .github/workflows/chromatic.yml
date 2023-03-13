@@ -19,10 +19,7 @@ jobs:
         run: npm i
 
       - name: Publish to Chromatic
-        run: chromatic --project-token=59b7949a76b9 --build-script-name=storybook-build
         uses: chromaui/action@v1
-
-        # Опции
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           buildScriptName: storybook-deploy-chromatic
