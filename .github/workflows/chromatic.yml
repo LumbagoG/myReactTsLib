@@ -17,9 +17,9 @@ jobs:
       - name: Install dependencies
         # Менеджер пакетов
         run: npm
-          - name: Publish to Chromatic
-            uses: chromaui/action@v1
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
 
-            # Опции
-            with:
-              projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+        # Опции
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
