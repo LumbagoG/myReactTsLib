@@ -8,8 +8,7 @@ on:
   push:
     paths: ["src/lib/**"]
     branches:
-      - main
-
+      - develop
 
 # Список действий
 jobs:
