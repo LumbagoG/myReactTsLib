@@ -6,7 +6,7 @@ name: "chromatic deploy"
 # Событие для процесса
 on:
   pull_request:
-    types: [ opened, reopened ]
+    types: [ opened, reopened, edited ]
     paths: ["src/lib/**"]
     branches:
       - develop
