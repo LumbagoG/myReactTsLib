@@ -19,7 +19,7 @@
         "storybook-build": "NODE_OPTIONS=--openssl-legacy-provider build-storybook",
         "storybook-build-preview": "npx http-server storybook-static -p 5005",
         "storybook-deploy-chromatic": "chromatic --project-token=59b7949a76b9 --build-script-name=storybook-build",
-        "storybook-deploy-gh-pages": "rm -rf node_modules/.cache/gh-pages && gh-pages -d storybook-static"
+        "storybook-deploy-gh-pages": "npm run storybook-build && rm -rf node_modules/.cache/gh-pages && gh-pages -d storybook-static"
     },
     "dependencies": {
         "path": "^0.12.7",

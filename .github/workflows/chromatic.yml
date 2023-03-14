@@ -1,7 +1,7 @@
 # .github/workflows/chromatic.yml
 
 # Название процесса
-name: "chromatic"
+name: "chromatic deploy"
 
 # Событие для процесса
 on:
