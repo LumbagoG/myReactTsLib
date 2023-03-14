@@ -28,7 +28,9 @@ export default defineConfig({
 
     // Настройки production сборки
     build: {
-        outDir: "build",
+        outDir: "build", // Директория production сборки
+
+        chunkSizeWarningLimit: 2048, // Лимит для размера одного чанка
 
         // Настройки генерации файлов для библиотеки
         lib: {
