@@ -4,7 +4,9 @@
 name: "chromatic"
 
 # Событие для процесса
-on: push
+on:
+  push:
+    paths: ["src/lib/**"]
 
 
 # Список действий
