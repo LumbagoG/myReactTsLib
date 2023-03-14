@@ -16,10 +16,9 @@
         "lib-build-preview": "vite preview",
         "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\"",
         "storybook-dev": "npm run linters && NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 5000",
-        "storybook-build": "NODE_OPTIONS=--openssl-legacy-provider build-storybook -s public",
+        "storybook-build": "NODE_OPTIONS=--openssl-legacy-provider build-storybook",
         "storybook-build-preview": "npx http-server storybook-static -p 5005",
-        "storybook-deploy-chromatic": "chromatic --project-token=59b7949a76b9 --build-script-name=storybook-build",
-        "storybook-deploy-gh-pages": "rm -rf node_modules/.cache/gh-pages && gh-pages -d storybook-static"
+        "storybook-deploy-gh-pages": "npm run storybook-build && rm -rf node_modules/.cache/gh-pages && gh-pages -d storybook-static"
     },
     "dependencies": {
         "path": "^0.12.7",
@@ -78,7 +77,7 @@
     },
     "license": "MIT",
     "files": [
-        "dist"
+        "build"
     ],
     "author": {
         "name": "https://github.com/LumbagoG"
@@ -92,13 +91,13 @@
         "url": "git+https://github.com/LumbagoG/myReactTsLib.git"
     },
     "type": "module",
-    "main": "./dist/react-ts-lib.umd.js",
-    "module": "./dist/react-ts-lib.es.js",
-    "types": "./dist/index.d.ts",
+    "main": "./build/react-ts-lib.umd.js",
+    "module": "./build/react-ts-lib.es.js",
+    "types": "./build/index.d.ts",
     "exports": {
         ".": {
-            "import": "./dist/react-ts-lib.es.js",
-            "require": "./dist/react-ts-lib.umd.js"
+            "import": "./build/react-ts-lib.es.js",
+            "require": "./build/react-ts-lib.umd.js"
         }
     },
     "readme": "ERROR: No README data found!",

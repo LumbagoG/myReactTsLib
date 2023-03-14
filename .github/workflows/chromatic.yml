@@ -1,11 +1,14 @@
 # .github/workflows/chromatic.yml
 
 # Название процесса
-name: "chromatic"
+name: "chromatic deploy"
 
 # Событие для процесса
-on: push
-
+on:
+  push:
+    paths: ["src/lib/**"]
+    branches:
+      - develop
 
 # Список действий
 jobs:
@@ -23,6 +26,6 @@ jobs:
         uses: chromaui/action@v1
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          buildScriptName: storybook-deploy-chromatic
+          buildScriptName: storybook-build
           debug: true
           zip: true
