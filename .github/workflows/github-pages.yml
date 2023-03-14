@@ -17,4 +17,4 @@ jobs:
         uses: bitovi/github-actions-react-to-ghp@v1.2.0
         with:
           path: storybook-static
-          build_command: npm run storybook-build && rm -rf node_modules/.cache/gh-pages && gh-pages -d storybook-static
+          build_command: npm run storybook-build && rm -rf node_modules/.cache/gh-pages
