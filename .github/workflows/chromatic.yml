@@ -4,8 +4,11 @@
 name: "chromatic"
 
 # Событие для процесса
-on: push
-
+on:
+  push:
+    paths: ["src/lib/**"]
+    branches:
+      - develop
 
 # Список действий
 jobs:
