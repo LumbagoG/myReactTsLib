@@ -7,6 +7,8 @@ name: "chromatic"
 on:
   push:
     paths: ["src/lib/**"]
+    branches:
+      - main
 
 
 # Список действий
