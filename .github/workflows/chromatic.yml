@@ -5,10 +5,11 @@ name: "chromatic deploy"
 
 # Событие для процесса
 on:
-  push:
+  pull_request:
+    types: [ opened, reopened, edited ]
     paths: ["src/lib/**"]
     branches:
-      - develop
+      - "main"
 
 # Список действий
 jobs:
