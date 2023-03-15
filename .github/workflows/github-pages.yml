@@ -27,8 +27,8 @@ jobs:
         run: |
           npm ci
           npm run storybook-build && rm -rf node_modules/.cache/gh-pages
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@3.6.2
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
           branch: gh-pages
           folder: storybook-static
