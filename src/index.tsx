@@ -1,7 +1,7 @@
 // Библиотеки
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./pages/app/App";
+import { App } from "./pages/app/App";
 
 // Стили
 import "@styles/index.scss";

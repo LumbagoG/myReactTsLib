@@ -5,26 +5,32 @@
     "publishConfig": {
         "registry": "https://npm.pkg.github.com/LumbagoG"
     },
-    "lint-staged": {
-        "**/*.{js,jsx,ts,tsx}": [
-            "npx prettier --write",
-            "npx eslint --fix"
-        ]
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
     },
     "scripts": {
         "lint-prettier": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
-        "lint-eslint": "eslint src/**/*.{ts,tsx}",
-        "lint-eslint:fix": "eslint --fix 'src/**/*.{ts,tsx}'",
+        "lint-eslint": "eslint --debug src/**/*.{ts,tsx}",
+        "lint-eslint:fix": "eslint --debug 'src/**/*.{ts,tsx}' --fix",
         "lint-stylelint": "stylelint src/**/*.styled.ts",
         "linters": "npm run lint-prettier && npm run lint-eslint && npm run lint-eslint:fix && npm run lint-stylelint",
         "lib-dev": "npm run linters && vite",
         "lib-build": "tsc && vite build",
         "lib-build-preview": "vite preview",
+        "pre-commit": "lint-staged",
         "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\"",
         "storybook-dev": "npm run linters && NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 5000",
         "storybook-build": "NODE_OPTIONS=--openssl-legacy-provider build-storybook",
         "storybook-build-preview": "npx http-server storybook-static -p 5005",
         "prepare": "husky install"
+    },
+    "lint-staged": {
+        "**/*.{js,jsx,ts,tsx}": [
+            "npm run linters",
+            "git add"
+        ]
     },
     "dependencies": {
         "path": "^0.12.7",
