@@ -9,7 +9,7 @@ on:
     types: [ opened, reopened, edited ]
     paths: ["src/lib/**"]
     branches:
-      - "main"
+      - "develop"
 
 # Список действий
 jobs:

@@ -24,8 +24,7 @@ export const useThemeMode = () => {
     /**
      * Функция переключение темы
      */
-    const themeToggle = () =>
-        theme === "dark" ? setMode("light") : setMode("dark");
+    const themeToggle = () => (theme === "dark" ? setMode("light") : setMode("dark"));
 
     useEffect(() => {
         const localTheme = window.localStorage.getItem("theme");
