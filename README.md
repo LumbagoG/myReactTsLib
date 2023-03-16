@@ -1,8 +1,8 @@
 # Моя ui библиотека компонентов
 
-## [Github project](https://github.com/users/LumbagoG/projects/1)
-## [Мое планирование задач todoist](https://github.com/users/LumbagoG/projects/1)
+## [GitHub project](https://github.com/users/LumbagoG/projects/1)
 
+## [Мое планирование задач todoist](https://github.com/users/LumbagoG/projects/1)
 
 ## Ссылки на ресурсы:
 

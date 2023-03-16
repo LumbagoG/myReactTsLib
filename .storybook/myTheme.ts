@@ -1,5 +1,7 @@
 // Библиотека
 import { create } from "@storybook/theming";
+// @ts-ignore
+import glebLogo from "./images/glebLogo.png";
 
 /**
  * Моя тема storybook
@@ -35,6 +37,6 @@ export const myTheme = create({
     // Брэнд
     brandTitle: "LumbagoG",
     brandUrl: "https://github.com/LumbagoG",
-    brandImage: "/glebLogo.png",
+    brandImage: glebLogo,
     brandTarget: "_blank",
 });
