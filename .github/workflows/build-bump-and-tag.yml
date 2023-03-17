@@ -1,0 +1,33 @@
+name: Build bump tag
+
+# Событие для процесса
+on:
+  workflow_run:
+    workflows: [ "chromatic deploy" ]
+    types:
+      - completed
+  pull_request:
+    types: [ opened, reopened, edited ]
+    paths: ["src/lib/**"]
+    branches:
+      - "develop"
+
+jobs:
+  tag-and-bump:
+    if: "!startsWith(github.event.head_commit.message, 'bump:')"
+    needs: install-and-test
+    runs-on: ubuntu-latest
+    name: "Bump version and create changelog with commitizen"
+    steps:
+      - name: Check out
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          token: "${{ secrets.GITHUB_TOKEN }}"
+      - id: cz
+        name: Bump package
+        uses: commitizen-tools/commitizen-action@master
+        with:
+          github_token: ${{ secrets.TOKEN_GITHUB }}
+      - name: Print Version
+        run: echo "Bumped to version ${{ steps.cz.outputs.version }}"
