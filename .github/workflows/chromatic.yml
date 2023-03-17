@@ -1,6 +1,4 @@
-# .github/workflows/chromatic.yml
-
-# Название процесса
+# Публикация storybook в chromatic
 name: "chromatic deploy"
 
 # Событие для процесса
@@ -19,7 +17,6 @@ on:
 jobs:
   sb-deployment:
 
-    # ОС
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
