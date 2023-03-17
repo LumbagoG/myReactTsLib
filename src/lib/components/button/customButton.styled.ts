@@ -11,16 +11,12 @@ import { ECustomButtonVariants } from "@lib/components";
  *  Стилевой компонент кнопки
  */
 export const CustomButtonStyled = styled(CustomButton)`
-    background-color: var(
-        --${(props) => (props.disabled ? "gray" : props.variant ?? "primary")}
-    );
+    background-color: var(--${(props) => (props.disabled ? "gray" : props.variant ?? "primary")});
     border-radius: 6px;
     border: none;
     color: var(
         ${(props) =>
-            props.variant &&
-            (props.variant === ECustomButtonVariants.SUCCESS ??
-                props.variant === ECustomButtonVariants.WARNING)
+            props.variant && (props.variant === ECustomButtonVariants.SUCCESS ?? props.variant === ECustomButtonVariants.WARNING)
                 ? "--dark"
                 : "--light"}
     );

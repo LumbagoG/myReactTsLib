@@ -1,14 +1,13 @@
 name: github-pages
 
+# Событие для процесса
 on:
   pull_request:
     types: [ opened, reopened, edited ]
     branches:
-      - "main"
-  # Allows you to run this workflow manually from the Actions tab
+      - "develop"
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: write
   pages: write

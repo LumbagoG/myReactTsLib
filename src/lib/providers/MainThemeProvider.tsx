@@ -13,9 +13,7 @@ import GlobalStyle from "@lib/styles/themes/globalStyle";
  * Провайдер основной темы
  * @constructor
  */
-export const MainThemeProvider: React.FC<PropsWithChildren> = ({
-    children,
-}) => (
+export const MainThemeProvider: React.FC<PropsWithChildren> = ({ children }) => (
     <ThemeProvider theme={mainTheme}>
         {/* Подключаем глобальные стили */}
         <GlobalStyle />
