@@ -5,11 +5,15 @@ name: "chromatic deploy"
 
 # Событие для процесса
 on:
+  workflow_run:
+    workflows: [ "github-pages" ]
+    types:
+      - completed
   pull_request:
     types: [ opened, reopened, edited ]
     paths: ["src/lib/**"]
     branches:
-      - "main"
+      - "develop"
 
 # Список действий
 jobs:
