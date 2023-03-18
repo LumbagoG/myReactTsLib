@@ -40,3 +40,9 @@ docker run -p 80:80 my-react-ts-lib
 ```
 npm i && npm run storybook-dev
 ```
+
+### Local (production)
+
+```
+npm i && npm run storybook-build && npm run storybook-build-preview
+```
