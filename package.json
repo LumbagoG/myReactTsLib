@@ -3,7 +3,7 @@
     "description": "Моя ui библиотека на react",
     "version": "0.0.1",
     "publishConfig": {
-        "lumbagog:registry": "https://npm.pkg.github.com/LumbagoG"
+        "LumbagoG:registry": "https://npm.pkg.github.com/LumbagoG"
     },
     "scripts": {
         "lint-prettier": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
