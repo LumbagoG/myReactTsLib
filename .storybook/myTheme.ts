@@ -1,7 +1,7 @@
 // Библиотека
 import { create } from "@storybook/theming";
 // @ts-ignore
-import glebLogo from "./images/glebLogo.png";
+import glebLogo from "../public/images/glebLogo.png";
 
 /**
  * Моя тема storybook
