@@ -1,5 +1,5 @@
 # Публикация в github-pages
-name: github-pages
+name: "github-pages"
 
 # Событие для процесса
 on:

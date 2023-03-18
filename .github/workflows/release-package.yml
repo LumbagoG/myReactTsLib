@@ -1,10 +1,10 @@
 # Релиз пакета
-name: Release
+name: "release-package"
 
 # Событие для процесса
 on:
   workflow_run:
-    workflows: ["Build bump tag"]
+    workflows: ["build-bump-and-tag"]
     types:
       - completed
 

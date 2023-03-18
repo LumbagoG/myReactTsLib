@@ -1,5 +1,5 @@
 # Публикация пакета
-name: Build bump tag
+name: "build-bump-and-tag"
 
 # Событие для процесса
 on:

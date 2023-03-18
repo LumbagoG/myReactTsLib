@@ -1,8 +1,12 @@
 # Публикация пакета в github packages
-name: Publish package to GitHub Packages
+name: "publish-package-github"
 
 # Событие для процесса
 on:
+    workflow_run:
+        workflows: [ "chromatic" ]
+        types:
+            - completed
     pull_request:
         types: [ opened, reopened, edited ]
         branches:
@@ -28,4 +32,4 @@ jobs:
             - run: npm ci
             - run: npm publish
               env:
-                  NODE_AUTH_TOKEN: ${{ secrets.TOKEN_GITHUB }}
+                  NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN  }}
