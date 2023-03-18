@@ -1,3 +1,4 @@
+# Релиз пакета
 name: Release
 
 # Событие для процесса
@@ -7,6 +8,7 @@ on:
     types:
       - completed
 
+# Список действий
 jobs:
   publish-gpr:
     runs-on: ubuntu-latest

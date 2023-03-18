@@ -1,0 +1,9 @@
+README.md
+build
+storybook-static
+node_modules
+package-lock.json
+.git
+.env
+.fleet
+.idea

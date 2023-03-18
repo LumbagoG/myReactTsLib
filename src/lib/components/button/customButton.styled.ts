@@ -14,12 +14,7 @@ export const CustomButtonStyled = styled(CustomButton)`
     background-color: var(--${(props) => (props.disabled ? "gray" : props.variant ?? "primary")});
     border-radius: 6px;
     border: none;
-    color: var(
-        ${(props) =>
-            props.variant && (props.variant === ECustomButtonVariants.SUCCESS ?? props.variant === ECustomButtonVariants.WARNING)
-                ? "--dark"
-                : "--light"}
-    );
+    color: var(${(props) => (props.variant && (props.variant === ECustomButtonVariants.SUCCESS ?? props.variant === ECustomButtonVariants.WARNING) ? "--dark" : "--light")});
     cursor: ${(props) => (props.disabled ? "default" : "pointer")};
     font-weight: 600;
     letter-spacing: 1px;

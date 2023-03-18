@@ -1,3 +1,4 @@
+# Публикация в github-pages
 name: github-pages
 
 # Событие для процесса
@@ -13,6 +14,7 @@ permissions:
   pages: write
   id-token: write
 
+# Список действий
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest

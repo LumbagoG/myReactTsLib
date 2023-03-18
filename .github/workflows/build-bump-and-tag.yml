@@ -1,3 +1,4 @@
+# Публикация пакета
 name: Build bump tag
 
 # Событие для процесса
@@ -12,6 +13,7 @@ on:
     branches:
       - "develop"
 
+# Список действий
 jobs:
   install-and-test:
     runs-on: ubuntu-latest

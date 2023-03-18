@@ -50,10 +50,14 @@ const config: StorybookConfig & StorybookViteConfig = {
 
     // Custom vite конфиг
     async viteFinal(config) {
-        return mergeConfig(config, {
-            // @ts-ignore-next-line
-            resolve: (await import("../vite.config.ts"))?.default?.resolve,
-        });
+        return mergeConfig(
+            config,
+            {
+                // @ts-ignore-next-line
+                resolve: (await import("../vite.config.ts"))?.default?.resolve,
+            },
+            true
+        );
     },
 
     // Настройки typescript
