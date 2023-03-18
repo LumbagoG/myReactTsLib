@@ -5,11 +5,6 @@
     "publishConfig": {
         "lumbagog:registry": "https://npm.pkg.github.com/LumbagoG"
     },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
-    },
     "scripts": {
         "lint-prettier": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
         "lint-eslint": "eslint --debug src/**/*.{ts,tsx}",
@@ -25,6 +20,11 @@
         "storybook-build": "NODE_OPTIONS=--openssl-legacy-provider build-storybook",
         "storybook-build-preview": "npx http-server storybook-static -p 5005",
         "prepare": "husky install"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
     },
     "lint-staged": {
         "**/*.{js,jsx,ts,tsx}": [
