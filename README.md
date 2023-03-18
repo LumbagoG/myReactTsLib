@@ -12,7 +12,7 @@
 -   Storybook
 -   Styled components
 -   Lint stages (husky + eslint + prettier + stylelint)
--   CI/CD 
+-   CI/CD
 -   Chromatic
 -   Docker
 
@@ -26,6 +26,7 @@
 ## Запуск проекта
 
 ### Docker (production)
+
 ```
 docker run -t my-react-ts-lib .
 ```
@@ -35,6 +36,7 @@ docker run -p 80:80 my-react-ts-lib
 ```
 
 ### Local (dev)
+
 ```
 npm i && npm run storybook-dev
 ```
