@@ -4,7 +4,7 @@ name: "github-pages"
 # Событие для процесса
 on:
   pull_request:
-    types: [ opened, reopened, edited ]
+    types: [ opened, reopened, edited, synchronize ]
     branches:
       - "develop"
   workflow_dispatch:

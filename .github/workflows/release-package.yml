@@ -7,6 +7,10 @@ on:
     workflows: ["build-bump-and-tag"]
     types:
       - completed
+  pull_request:
+      types: [ opened, reopened, edited, synchronize ]
+      branches:
+          - "develop"
 
 # Список действий
 jobs:
