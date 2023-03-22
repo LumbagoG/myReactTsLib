@@ -1,5 +1,5 @@
-# Publish to GitHub packages
-name: "publish-package-github"
+# Publishing package to GitHub
+name: publish-package-github
 
 # Process event
 on:
@@ -12,24 +12,23 @@ on:
         branches:
             - "develop"
     release:
-        types: [published]
+        types: [created]
 
 # List tasks
 jobs:
-    build:
+    publish-gpr:
+        needs: build
         runs-on: ubuntu-latest
         permissions:
-            contents: write
+            contents: read
             packages: write
-            id-token: write
         steps:
             - uses: actions/checkout@v3
             - uses: actions/setup-node@v3
               with:
-                  node-version: '16.x'
-                  registry-url: 'https://npm.pkg.github.com'
-                  scope: '@LumbagoG'
+                  node-version: 16
+                  registry-url: https://npm.pkg.github.com/
             - run: npm ci
             - run: npm publish
               env:
-                  NODE_AUTH_TOKEN: ${{ secrets.TOKEN_GITHUB  }}
+                  NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
