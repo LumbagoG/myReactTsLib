@@ -1,9 +1,20 @@
-# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
-# For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
-name: Node.js Package
+# Publishing package to GitHub
+name: publish-package-github
+
+# Process event
 on:
+    workflow_run:
+        workflows: [ "chromatic" ]
+        types:
+            - completed
+    pull_request:
+        types: [ opened, reopened, edited, synchronize ]
+        branches:
+            - "develop"
     release:
         types: [created]
+
+# List tasks
 jobs:
     build:
         runs-on: ubuntu-latest
