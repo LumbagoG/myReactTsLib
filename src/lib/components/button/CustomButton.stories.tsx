@@ -1,10 +1,11 @@
 // Компонент
 import { CustomButtonStyled as CustomButton, ECustomButtonVariants } from "@lib/components/button/index";
 
-// Типы
+// Types
 import type { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+
 /**
- * Описание компонента
+ * Components description
  */
 const meta: ComponentMeta<typeof CustomButton> = {
     title: "Design System/Button",
@@ -13,7 +14,7 @@ const meta: ComponentMeta<typeof CustomButton> = {
 export default meta;
 
 /**
- * Дефолтная кнопка
+ * Default button
  */
 export const Default: ComponentStoryObj<typeof CustomButton> = {
     args: {
@@ -22,7 +23,7 @@ export const Default: ComponentStoryObj<typeof CustomButton> = {
 };
 
 /**
- * Заблокированная кнопка
+ * Disabled button
  */
 export const Disabled: ComponentStoryObj<typeof CustomButton> = {
     args: {
@@ -32,7 +33,7 @@ export const Disabled: ComponentStoryObj<typeof CustomButton> = {
 };
 
 /**
- * Успех
+ * Success button
  */
 export const SuccessVariant: ComponentStoryObj<typeof CustomButton> = {
     args: {
@@ -42,7 +43,7 @@ export const SuccessVariant: ComponentStoryObj<typeof CustomButton> = {
 };
 
 /**
- * Кнопка с обработчиком нажатия
+ * Button with click handle
  */
 export const WithClickHandler: ComponentStoryObj<typeof CustomButton> = {
     args: {

@@ -1,20 +1,20 @@
-// Типы
+// Types
 import type { ButtonHTMLAttributes, MouseEventHandler } from "react";
 
 // Enums
 import type { ECustomButtonVariants } from "@lib/components/button";
 
 /**
- * Типы props компонента кнопки
+ * Types props button
  */
 export type TCustomButton = ButtonHTMLAttributes<HTMLButtonElement> & {
     /**
-     * Вариант кнопки
+     * Button variants
      */
     variant?: ECustomButtonVariants;
 
     /**
-     * Событие на клик
+     * Click event handler
      */
     onClick?: MouseEventHandler<HTMLButtonElement>;
 };

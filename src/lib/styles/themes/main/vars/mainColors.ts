@@ -1,13 +1,13 @@
-// Интерфейсы
+// Interfaces
 import type { TMainColors } from "../types";
 
 /**
- * Все цвета основной темы
+ * Colors main theme
  * @link https://www.figma.com/file/Aq10VUMGoFEoKWoBccdelr/myReactTsLib?node-id=2-117&t=DBCdWMr1eON7Qb1I-0
  */
 export const mainColors: TMainColors = {
     /**
-     * Серый цвет
+     * Gray colors
      */
     gray: {
         900: "#111827",
@@ -23,7 +23,7 @@ export const mainColors: TMainColors = {
     },
 
     /**
-     * Красный цвет
+     * Red colors
      */
     red: {
         900: "#7F1D1D",
@@ -39,7 +39,7 @@ export const mainColors: TMainColors = {
     },
 
     /**
-     * Оранжевый цвет
+     * Orange colors
      */
     orange: {
         900: "#7C2D12",
@@ -55,7 +55,7 @@ export const mainColors: TMainColors = {
     },
 
     /**
-     * Желтый цвет
+     * Yellow colors
      */
     yellow: {
         900: "#78350F",
@@ -71,7 +71,7 @@ export const mainColors: TMainColors = {
     },
 
     /**
-     * Зеленый цвет
+     * Green colors
      */
     green: {
         900: "#064E3B",
@@ -87,7 +87,7 @@ export const mainColors: TMainColors = {
     },
 
     /**
-     * Светло-зеленый цвет
+     * Light green colors
      */
     teal: {
         900: "#134E4A",
@@ -103,7 +103,7 @@ export const mainColors: TMainColors = {
     },
 
     /**
-     * Сине-зеленый цвет
+     * Blue-green colors
      */
     cyan: {
         900: "#164E63",
@@ -119,7 +119,7 @@ export const mainColors: TMainColors = {
     },
 
     /**
-     * Светло-синий цвет
+     * Light blue colors
      */
     lightBlue: {
         900: "#0C4A6E",
@@ -135,7 +135,7 @@ export const mainColors: TMainColors = {
     },
 
     /**
-     * Синий цвет
+     * Blue colors
      */
     blue: {
         900: "#1E3A8A",
@@ -151,7 +151,7 @@ export const mainColors: TMainColors = {
     },
 
     /**
-     * Фиолетово-синий цвет
+     * Purple-blue colors
      */
     indigo: {
         900: "#312E81",
@@ -167,7 +167,7 @@ export const mainColors: TMainColors = {
     },
 
     /**
-     * Фиолетовый цвет
+     * Purple colors
      */
     purple: {
         900: "#4C1D95",
@@ -183,7 +183,7 @@ export const mainColors: TMainColors = {
     },
 
     /**
-     * Розовый цвет
+     * Pink colors
      */
     pink: {
         900: "#831843",
@@ -199,7 +199,7 @@ export const mainColors: TMainColors = {
     },
 
     /**
-     * Розово-красный цвет
+     * Pink-red colors
      */
     rose: {
         900: "#881337",

@@ -1,14 +1,14 @@
-// Библиотеки
+// Library's
 import styled from "styled-components";
 
-// Компоненты
+// Components
 import { CustomButton } from "./CustomButton";
 
 // Enums
 import { ECustomButtonVariants } from "@lib/components";
 
 /**
- *  Стилевой компонент кнопки
+ *  Styled
  */
 export const CustomButtonStyled = styled(CustomButton)`
     background-color: var(--${(props) => (props.disabled ? "gray" : props.variant ?? "primary")});

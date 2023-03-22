@@ -4,7 +4,7 @@ import { create } from "@storybook/theming";
 import glebLogo from "../public/images/glebLogo.png";
 
 /**
- * Моя тема storybook
+ * My theme storybook
  */
 export const myTheme = create({
     base: "dark",
@@ -15,11 +15,11 @@ export const myTheme = create({
     appBorderColor: "#c9d1d9",
     appBorderRadius: 8,
 
-    // Типографика
+    // Typography
     fontBase: '"Apple", sans-serif',
     fontCode: "monospace",
 
-    // Цвета текста
+    // Text colors
     textColor: "#c9d1d9",
     textInverseColor: "#c9d1d9",
 
@@ -28,13 +28,13 @@ export const myTheme = create({
     barSelectedColor: "#c9d1d9",
     barBg: "#161b22",
 
-    // Цвета формы
+    // Forms colors
     inputBg: "#161b22",
     inputBorder: "#c9d1d9",
     inputTextColor: "#c9d1d9",
     inputBorderRadius: 4,
 
-    // Брэнд
+    // Brand
     brandTitle: "LumbagoG",
     brandUrl: "https://github.com/LumbagoG",
     brandImage: glebLogo,

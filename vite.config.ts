@@ -1,4 +1,4 @@
-// Библиотеки
+// Library's
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
@@ -7,10 +7,11 @@ import dts from "vite-plugin-dts";
 const pathResolve = (src: string) => path.resolve(__dirname, src);
 
 /**
+ * Vite config
  * https://vitejs.dev/config/
  */
 export default defineConfig({
-    // Плагины
+    // Plugins
     plugins: [
         react({ jsxRuntime: "classic" }),
         dts({
@@ -18,7 +19,7 @@ export default defineConfig({
         }),
     ],
     resolve: {
-        // Аллиасы
+        // Aliases
         alias: {
             "@assets": pathResolve("./src/assets"),
             "@styles": pathResolve("./src/assets/styles"),
@@ -26,21 +27,17 @@ export default defineConfig({
         },
     },
 
-    // Настройки production сборки
+    // Settings for production
     build: {
-        outDir: "build", // Директория production сборки
+        outDir: "build",
 
-        chunkSizeWarningLimit: 2048, // Лимит для размера одного чанка
+        chunkSizeWarningLimit: 2048,
 
-        // Настройки генерации файлов для библиотеки
+        // Settings generation files for library
         lib: {
-            // Путь к основному файлу библиотеки
             entry: pathResolve("src/lib/index.ts"),
-            // Название библиотеки
             name: "ReactTSLib",
-            // Форматы генерируемых файлов
             formats: ["es", "umd"],
-            // Названия генерируемых файлов
             fileName: (format) => `react-ts-lib.${format}.js`,
         },
         // https://vitejs.dev/config/build-options.html#build-rollupoptions

@@ -1,7 +1,7 @@
-# Публикация storybook в chromatic
+# Publication storybook in chromatic
 name: "chromatic"
 
-# Событие для процесса
+# Process event
 on:
     workflow_run:
         workflows: [ "github-pages" ]
@@ -12,7 +12,7 @@ on:
         branches:
         - "develop"
 
-# Список действий
+# List tasks
 jobs:
     sb-deployment:
         runs-on: ubuntu-latest

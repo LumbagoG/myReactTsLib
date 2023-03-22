@@ -1,33 +1,32 @@
-// Цвета
+// Colors
 import { mainColors } from "@lib/styles";
 
-// Хуки
+// Hooks
 import { useThemeMode } from "@lib/hooks";
 
 const darkMainTheme = {};
 const lightMainTheme = {};
 
 /*
- * Основная тема
+ * Main theme
  */
 export const mainTheme = () => {
-    // Текущая тема
+    // Current theme
     const { theme } = useThemeMode();
 
     /**
-     * Мод темы
+     * Get theme mode
      */
     const themeMode = theme === "dark" ? darkMainTheme : lightMainTheme;
 
     return {
         /**
-         * Все Цвета
-         *
+         * Colors
          */
         color: { ...mainColors },
 
         /**
-         * Мод темы
+         * Theme mode
          */
         ...themeMode,
     };

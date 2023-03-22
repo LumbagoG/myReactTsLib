@@ -1,10 +1,8 @@
-// Библиотеки
+// Library's
 import { createGlobalStyle, withTheme } from "styled-components";
 
-// Основная тема
-
 /**
- * Создание глобальных стилей
+ * Creating global styles
  */
 const globalStyle = createGlobalStyle`
     * {
@@ -13,7 +11,7 @@ const globalStyle = createGlobalStyle`
         box-sizing: border-box;
         outline: 0;
     }
-    
+
     html {
         font-family: "Inter", sans-serif;
     }
@@ -23,5 +21,4 @@ const globalStyle = createGlobalStyle`
       height: 100%;
     }
 `;
-
 export default withTheme(globalStyle);

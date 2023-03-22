@@ -1,9 +1,9 @@
-// Типы
+// Types
 import type { TNumberColor } from "@lib";
 import type { TNameColor } from "@lib";
 
 /**
- * Интерфейс цветов основной темы
+ * Interface of colors main theme
  */
 export type TTheme = {
     [key in TNameColor]: {

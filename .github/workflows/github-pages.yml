@@ -1,7 +1,7 @@
 # Публикация в github-pages
 name: "github-pages"
 
-# Событие для процесса
+# Process event
 on:
   pull_request:
     types: [ opened, reopened, edited, synchronize ]
@@ -14,7 +14,7 @@ permissions:
   pages: write
   id-token: write
 
-# Список действий
+# List tasks
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest

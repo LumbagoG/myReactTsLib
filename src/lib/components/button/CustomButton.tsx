@@ -1,15 +1,15 @@
-// Библиотеки
+// Library's
 import React from "react";
 import type { MouseEventHandler, PropsWithChildren } from "react";
 
 // Enums
 import { ECustomButtonVariants } from "@lib/components";
 
-// Типы
+// Types
 import type { TCustomButton } from "./types/TCustomButton";
 
 /**
- * Компонент кнопки
+ * Button component
  * @constructor
  */
 export const CustomButton: React.FC<PropsWithChildren<TCustomButton>> = ({
@@ -20,16 +20,13 @@ export const CustomButton: React.FC<PropsWithChildren<TCustomButton>> = ({
     variant = ECustomButtonVariants.PRIMARY,
     ...restProps
 }) => {
-    // Если кнопка заблокирована, переданный обработчик не вызывается
     const handleClick: MouseEventHandler<HTMLButtonElement> = (e) => {
         if (disabled) return;
         onClick && onClick(e);
     };
 
     return (
-        // Кнопка
         <button disabled={disabled} onClick={handleClick} {...restProps}>
-            {/* Ребенок кнопки  */}
             {children}
         </button>
     );

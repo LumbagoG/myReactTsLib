@@ -1,24 +1,24 @@
-// Библиотеки
+// Library's
 import React from "react";
 import { ThemeProvider } from "styled-components";
 
-// Типы
+// Types
 import type { PropsWithChildren } from "react";
 
-// Стили
+// styles
 import { mainTheme } from "@lib";
 import GlobalStyle from "@lib/styles/themes/globalStyle";
 
 /**
- * Провайдер основной темы
+ * Provider main theme
  * @constructor
  */
 export const MainThemeProvider: React.FC<PropsWithChildren> = ({ children }) => (
     <ThemeProvider theme={mainTheme}>
-        {/* Подключаем глобальные стили */}
+        {/* Importing global styles */}
         <GlobalStyle />
 
-        {/* Ребенок */}
+        {/* Children */}
         {children}
     </ThemeProvider>
 );

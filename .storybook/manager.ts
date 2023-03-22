@@ -1,15 +1,15 @@
-// Библиотеки
+// Library's
 import { addons } from "@storybook/addons";
 import { myTheme } from "./myTheme";
 
 /**
- * Задаем конфиг отображения storybook
+ * Config view storybook
  */
 addons.setConfig({
-    // Тема
+    // Theme
     theme: myTheme,
 
-    // Прочие настройки
+    // Other settings
     isFullscreen: false,
     showNav: true,
     showPanel: true,

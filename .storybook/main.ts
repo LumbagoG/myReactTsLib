@@ -1,21 +1,15 @@
-// Библиотеки
+// Library's
 import { mergeConfig } from "vite";
 
-// Типы
+// Types
 import type { StorybookConfig } from "@storybook/core-common";
 import type { StorybookViteConfig } from "@storybook/builder-vite";
 
-/**
- * Конфиг storybook
- */
 const config: StorybookConfig & StorybookViteConfig = {
-    // Конфиг историй
     stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.tsx"],
 
-    // Static dirs
     staticDirs: ["../public"],
 
-    // Расширения
     addons: [
         "@storybook/addon-a11y", // Тестирование
         "@storybook/addon-actions", // Консоль с событиями
@@ -48,7 +42,7 @@ const config: StorybookConfig & StorybookViteConfig = {
         storyStoreV7: true,
     },
 
-    // Custom vite конфиг
+    // Custom vite config
     async viteFinal(config) {
         return mergeConfig(
             config,
@@ -60,11 +54,9 @@ const config: StorybookConfig & StorybookViteConfig = {
         );
     },
 
-    // Настройки typescript
     typescript: {
         reactDocgen: "react-docgen-typescript",
     },
 };
 
-// Экспортируем конфиг
 module.exports = config;
