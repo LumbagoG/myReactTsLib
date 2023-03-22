@@ -3,10 +3,6 @@ name: "publish-package-github"
 
 # Process event
 on:
-    workflow_run:
-        workflows: [ "chromatic" ]
-        types:
-            - completed
     pull_request:
         types: [ opened, reopened, edited, synchronize ]
         branches:
