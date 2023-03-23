@@ -13,7 +13,6 @@ on:
 # List tasks
 jobs:
     publish-gpr:
-        needs: build
         runs-on: ubuntu-latest
         permissions:
             contents: read
