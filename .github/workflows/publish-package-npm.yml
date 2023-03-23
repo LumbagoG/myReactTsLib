@@ -7,10 +7,6 @@ on:
         types: [ opened, reopened, edited, synchronize ]
         branches:
             - "develop"
-    workflow_run:
-        workflows: [ "publish-package-github" ]
-        types:
-            - completed
     release:
         types: [created]
 
@@ -24,6 +20,7 @@ jobs:
                 with:
                     node-version: 16
                     registry-url: https://registry.npmjs.org/
+
             -   run: npm ci
             -   run: npm publish
                 env:
