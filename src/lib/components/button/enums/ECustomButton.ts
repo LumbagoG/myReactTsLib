@@ -1,24 +1,24 @@
 /**
- * Вариации компонента кнопки
+ * Buttons variants
  */
 export enum ECustomButtonVariants {
     /**
-     * Синий (нейтральный)
+     * Blue
      */
     PRIMARY = "primary",
 
     /**
-     * Зеленый (подтверждающий)
+     * Green
      */
     SUCCESS = "success",
 
     /**
-     * Желтый (предупреждающий)
+     * Yellow
      */
     WARNING = "warning",
 
     /**
-     * Красный (отклоняющий)
+     * Red
      */
     DANGER = "danger",
 }

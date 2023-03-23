@@ -1,9 +1,9 @@
-// Декоратор темы
+// Theme decorator
 import { WithThemeDecorator } from "./withTheme.decorator";
 import { Parameters } from "@storybook/react";
 
 /**
- * Параметры историй
+ * Params stories
  */
 export const parameters: Parameters = {
     actions: { argTypesRegex: "^on[A-Z].*" },

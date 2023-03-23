@@ -1,11 +1,11 @@
-// Библиотеки
+// Library's
 import { useEffect, useState } from "react";
 
-// Тип темы
+// Type theme modes
 type TModeTheme = "light" | "dark";
 
 /**
- * Хук для переключения темы
+ * Hook for toggle theme
  * @constructor
  */
 export const useThemeMode = () => {
@@ -13,7 +13,7 @@ export const useThemeMode = () => {
     const [theme, setTheme] = useState("dark");
 
     /**
-     * Функция для проставления темы
+     * Setting mode theme
      * @param mode - Название темы
      */
     const setMode = (mode: TModeTheme) => {
@@ -22,7 +22,7 @@ export const useThemeMode = () => {
     };
 
     /**
-     * Функция переключение темы
+     * Toggle mode theme
      */
     const themeToggle = () => (theme === "dark" ? setMode("light") : setMode("dark"));
 

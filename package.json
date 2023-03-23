@@ -1,9 +1,9 @@
 {
     "name": "@lumbagog/my-react-ts-lib",
-    "description": "Моя ui библиотека на react",
+    "description": "My ui library react components",
     "version": "0.0.1",
     "publishConfig": {
-        "lumbagog:registry": "https://npm.pkg.github.com/LumbagoG"
+        "LumbagoG:registry": "https://npm.pkg.github.com/LumbagoG"
     },
     "scripts": {
         "lint-prettier": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
@@ -101,7 +101,6 @@
     },
     "homepage": "https://github.com/LumbagoG/myReactTsLib",
     "repository": {
-        "type": "git",
         "url": "git+https://github.com/LumbagoG/myReactTsLib.git"
     },
     "type": "module",

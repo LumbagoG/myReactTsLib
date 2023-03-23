@@ -1,6 +1,6 @@
 # EditorConfig http://EditorConfig.org
 
-# Файл EditorConfig верхнего уровня
+# Root file EditorConfig
 root = true
 
 [*.md]
@@ -15,7 +15,6 @@ trim_trailing_whitespace = true
 [*.tsx]
 trim_trailing_whitespace = true
 
-# Переводы строк в стиле Unix с пустой строкой в конце файла
 [*]
 indent_style = space
 indent_size = 4

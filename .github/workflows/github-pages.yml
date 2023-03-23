@@ -1,20 +1,20 @@
 # Публикация в github-pages
-name: github-pages
+name: "github-pages"
 
-# Событие для процесса
+# Process event
 on:
-  pull_request:
-    types: [ opened, reopened, edited ]
-    branches:
-      - "develop"
-  workflow_dispatch:
+    pull_request:
+        types: [ opened, reopened, edited, synchronize ]
+        branches:
+            - "develop"
+    workflow_dispatch:
 
 permissions:
-  contents: write
-  pages: write
-  id-token: write
+    contents: write
+    pages: write
+    id-token: write
 
-# Список действий
+# List tasks
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest

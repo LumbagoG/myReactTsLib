@@ -1,33 +1,31 @@
-# Публикация storybook в chromatic
-name: "chromatic deploy"
+# Publication storybook in chromatic
+name: "chromatic"
 
-# Событие для процесса
+# Process event
 on:
-  workflow_run:
-    workflows: [ "github-pages" ]
-    types:
-      - completed
-  pull_request:
-    types: [ opened, reopened, edited ]
-    paths: ["src/lib/**"]
-    branches:
-      - "develop"
+    workflow_run:
+        workflows: [ "github-pages" ]
+        types:
+            - completed
+    pull_request:
+        types: [ opened, reopened, edited, synchronize ]
+        branches:
+        - "develop"
 
-# Список действий
+# List tasks
 jobs:
-  sb-deployment:
+    sb-deployment:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v1
 
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
+          - name: Install dependencies
+            run: npm i
 
-      - name: Install dependencies
-        run: npm i
-
-      - name: Publish to Chromatic
-        uses: chromaui/action@v1
-        with:
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          buildScriptName: storybook-build
-          debug: true
-          zip: true
+          - name: Publish to Chromatic
+            uses: chromaui/action@v1
+            with:
+              projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+              buildScriptName: storybook-build
+              debug: true
+              zip: true
