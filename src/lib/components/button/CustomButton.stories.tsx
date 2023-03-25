@@ -1,5 +1,5 @@
 // Компонент
-import { CustomButtonStyled as CustomButton, ECustomButtonVariants } from "@lib/components/button/index";
+import { CustomButtonStyled as CustomButton, ECustomButtonVariants } from "./";
 
 // Types
 import type { ComponentMeta, ComponentStoryObj } from "@storybook/react";
