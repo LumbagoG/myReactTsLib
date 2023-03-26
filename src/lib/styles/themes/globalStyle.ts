@@ -1,10 +1,14 @@
 // Library's
 import { createGlobalStyle, withTheme } from "styled-components";
+import normalize from "styled-normalize";
 
 /**
  * Creating global styles
  */
 const globalStyle = createGlobalStyle`
+    // Normalize css
+    ${normalize}
+
     * {
         margin: 0;
         padding: 0;
