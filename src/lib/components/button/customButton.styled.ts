@@ -16,7 +16,7 @@ export const CustomButtonStyled = styled(CustomButton)`
     border: none;
     color: ${(props) =>
         props.variant && (props.variant === ECustomButtonVariants.SUCCESS ?? props.variant === ECustomButtonVariants.WARNING)
-            ? "black"
+            ? props.theme
             : "white"};
     cursor: ${(props) => (props.disabled ? "default" : "pointer")};
     font-weight: 600;
