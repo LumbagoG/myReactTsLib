@@ -13,6 +13,7 @@ import type { SetStateAction } from "react";
 export const UseLocalStorage = <T>(key: string, defaultValue?: T | (() => T)) => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
+    // Creating store of localStorage
     const [state, setState] = useState<T>(() => {
         const storedState = localStorage.getItem(key);
 
@@ -21,6 +22,10 @@ export const UseLocalStorage = <T>(key: string, defaultValue?: T | (() => T)) =>
         return defaultValue instanceof Function ? defaultValue() : defaultValue;
     });
 
+    /**
+     * Set value to localstorage & state
+     * @param value
+     */
     const setValue = (value: SetStateAction<T>) => {
         const valueToStore = value instanceof Function ? value(state) : value;
         localStorage.setItem(key, JSON.stringify(valueToStore));
