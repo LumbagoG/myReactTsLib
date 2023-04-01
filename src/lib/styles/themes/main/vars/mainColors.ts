@@ -1,4 +1,4 @@
-// Interfaces
+// Types
 import type { TMainColors } from "../types";
 
 /**

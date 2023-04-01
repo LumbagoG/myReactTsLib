@@ -3,6 +3,7 @@ import { ThemeProvider } from "styled-components";
 
 // Styles
 import GlobalStyle from "@lib/styles/themes/globalStyle";
+import { darkMainTheme, mainTheme, lightMainTheme } from "@lib/styles";
 
 /**
  * Global decorator of stories
@@ -10,7 +11,7 @@ import GlobalStyle from "@lib/styles/themes/globalStyle";
  */
 export const WithThemeDecorator = (Story: any) => {
     return (
-        <ThemeProvider theme={{}}>
+        <ThemeProvider theme={mainTheme(darkMainTheme, lightMainTheme)}>
             <GlobalStyle />
             <Story />
         </ThemeProvider>

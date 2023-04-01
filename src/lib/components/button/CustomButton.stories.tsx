@@ -1,5 +1,5 @@
 // Компонент
-import { CustomButtonStyled as CustomButton, ECustomButtonVariants } from "@lib/components/button/index";
+import { CustomButtonStyled as CustomButton, ECustomButtonVariants } from "./";
 
 // Types
 import type { ComponentMeta, ComponentStoryObj } from "@storybook/react";
@@ -8,7 +8,7 @@ import type { ComponentMeta, ComponentStoryObj } from "@storybook/react";
  * Components description
  */
 const meta: ComponentMeta<typeof CustomButton> = {
-    title: "Design System/Button",
+    title: "Components/Button",
     component: CustomButton,
 };
 export default meta;
@@ -19,6 +19,7 @@ export default meta;
 export const Default: ComponentStoryObj<typeof CustomButton> = {
     args: {
         children: "primary",
+        variant: ECustomButtonVariants.PRIMARY,
     },
 };
 

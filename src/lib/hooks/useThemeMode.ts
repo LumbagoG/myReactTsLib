@@ -1,6 +1,9 @@
 // Library's
 import { useEffect, useState } from "react";
 
+// Utils
+import { storage } from "@lib/utils";
+
 // Type theme modes
 type TModeTheme = "light" | "dark";
 
@@ -10,14 +13,13 @@ type TModeTheme = "light" | "dark";
  */
 export const useThemeMode = () => {
     // State theme
-    const [theme, setTheme] = useState("dark");
+    const [theme, setTheme] = useState<TModeTheme>("dark");
 
     /**
      * Setting mode theme
-     * @param mode - Название темы
      */
     const setMode = (mode: TModeTheme) => {
-        window.localStorage.setItem("theme", mode);
+        storage.set<TModeTheme>("theme", mode);
         setTheme(mode);
     };
 
@@ -27,7 +29,7 @@ export const useThemeMode = () => {
     const themeToggle = () => (theme === "dark" ? setMode("light") : setMode("dark"));
 
     useEffect(() => {
-        const localTheme = window.localStorage.getItem("theme");
+        const localTheme = storage.get<TModeTheme>("theme");
         localTheme && setTheme(localTheme);
     }, []);
 

@@ -11,10 +11,13 @@ import { ECustomButtonVariants } from "@lib/components";
  *  Styled
  */
 export const CustomButtonStyled = styled(CustomButton)`
-    background-color: var(--${(props) => (props.disabled ? "gray" : props.variant ?? "primary")});
+    background-color: ${(props) => (props.disabled ? "gray" : props.variant ?? "blue")};
     border-radius: 6px;
     border: none;
-    color: var(${(props) => (props.variant && (props.variant === ECustomButtonVariants.SUCCESS ?? props.variant === ECustomButtonVariants.WARNING) ? "--dark" : "--light")});
+    color: ${(props) =>
+        props.variant && (props.variant === ECustomButtonVariants.SUCCESS ?? props.variant === ECustomButtonVariants.WARNING)
+            ? props.theme
+            : "white"};
     cursor: ${(props) => (props.disabled ? "default" : "pointer")};
     font-weight: 600;
     letter-spacing: 1px;
