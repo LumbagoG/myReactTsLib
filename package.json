@@ -1,10 +1,7 @@
 {
     "name": "@lumbagog/my-react-ts-lib",
     "description": "My ui library react components",
-    "version": "0.0.2",
-    "publishConfig": {
-        "LumbagoG:registry": "https://npm.pkg.github.com/LumbagoG"
-    },
+    "version": "0.0.7",
     "scripts": {
         "lint-prettier": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
         "lint-eslint": "eslint --debug src/**/*.{ts,tsx}",
@@ -15,7 +12,6 @@
         "lib-build": "tsc && vite build",
         "lib-build-preview": "vite preview",
         "pre-commit": "lint-staged",
-        "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\"",
         "storybook-dev": "npm run linters && NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 5000",
         "storybook-build": "NODE_OPTIONS=--openssl-legacy-provider build-storybook",
         "storybook-build-preview": "npx http-server storybook-static -p 5005",
