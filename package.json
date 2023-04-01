@@ -1,7 +1,7 @@
 {
     "name": "@lumbagog/my-react-ts-lib",
     "description": "My ui library react components",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "scripts": {
         "lint-prettier": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
         "lint-eslint": "eslint --debug src/**/*.{ts,tsx}",
