@@ -1,7 +1,7 @@
 {
     "name": "@lumbagog/my-react-ts-lib",
     "description": "My ui library react components",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "publishConfig": {
         "LumbagoG:registry": "https://npm.pkg.github.com/LumbagoG"
     },
