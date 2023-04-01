@@ -15,7 +15,6 @@
         "lib-build": "tsc && vite build",
         "lib-build-preview": "vite preview",
         "pre-commit": "lint-staged",
-        "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\"",
         "storybook-dev": "npm run linters && NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 5000",
         "storybook-build": "NODE_OPTIONS=--openssl-legacy-provider build-storybook",
         "storybook-build-preview": "npx http-server storybook-static -p 5005",
