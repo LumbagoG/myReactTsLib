@@ -1,19 +1,52 @@
-# Моя ui библиотека компонентов
+# ![](https://github.com/LumbagoG/myReactTsLib/blob/master/public/images/glebLogo.png?raw=true) My ul library react components
 
-## [Github project](https://github.com/users/LumbagoG/projects/1)
+## ![](https://raw.githubusercontent.com/LumbagoG/myReactTsLib/38e70934be1a0e46235be07e7e8f9321213cdb37/public/icons/download.svg) Download package for free now
+`npm i @lumbagog/my-react-ts-lib`
 
-## [Мое планирование задач todoist](https://github.com/users/LumbagoG/projects/1)
+## ![](https://raw.githubusercontent.com/LumbagoG/myReactTsLib/b646dfcbf0d304a17e267dba8519d3c2b14fe0fd/public/icons/bag.svg) Project management
 
-## Ссылки на ресурсы:
+- [GitHub project](https://github.com/users/LumbagoG/projects/1)
+- [Asana](https://app.asana.com/0/1204200821295672/1204200821295672)
 
--   [Figma ui design](https://www.figma.com/file/Aq10VUMGoFEoKWoBccdelr/myReactTsLib?node-id=0-1&t=DBCdWMr1eON7Qb1I-0)
--   [Chromatic project](https://www.chromatic.com/library?appId=6405776599109c9529f5c23a)
--   [Chromatic app](https://6405776599109c9529f5c23a-jwdylatwub.chromatic.com/?path=/story)
--   [Github pages](https://lumbagog.github.io/myReactTsLib/)
+## ![](https://raw.githubusercontent.com/LumbagoG/myReactTsLib/38e70934be1a0e46235be07e7e8f9321213cdb37/public/icons/code.svg) Ingredients:
 
-## Ингридиенты:
+- React js + typescript
+- Vite
+- Storybook
+- Styled components
+- Lint stages (husky + eslint + prettier + stylelint)
+- CI/CD
+- Chromatic
+- Docker
 
--   React js + typescript
--   Vite
--   Storybook
--   Styled components
+## ![](https://raw.githubusercontent.com/LumbagoG/myReactTsLib/38e70934be1a0e46235be07e7e8f9321213cdb37/public/icons/link.svg) Links for app resources:
+- [npm package](https://www.npmjs.com/package/@lumbagog/my-react-ts-lib?activeTab=readme)
+- [gh package](https://github.com/LumbagoG/myReactTsLib/pkgs/npm/my-react-ts-lib)
+- [Figma ui design](https://www.figma.com/file/Aq10VUMGoFEoKWoBccdelr/myReactTsLib?node-id=0-1&t=DBCdWMr1eON7Qb1I-0)
+- [Chromatic project](https://www.chromatic.com/library?appId=6405776599109c9529f5c23a)
+- [Chromatic app](https://6405776599109c9529f5c23a-jwdylatwub.chromatic.com/?path=/story)
+- [Github pages](https://lumbagog.github.io/myReactTsLib/)
+
+## ![](https://raw.githubusercontent.com/LumbagoG/myReactTsLib/38e70934be1a0e46235be07e7e8f9321213cdb37/public/icons/power.svg) Startup project
+
+### Docker (production)
+
+```
+docker run -t my-react-ts-lib .
+```
+
+```
+docker run -p 80:80 my-react-ts-lib
+```
+
+### Local (dev)
+
+```
+npm i && npm run storybook-dev
+```
+
+### Local (production)
+
+```
+npm i && npm run storybook-build && npm run storybook-build-preview
+```
