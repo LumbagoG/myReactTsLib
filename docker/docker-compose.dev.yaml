@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+    lib:
+        image: lib-dev-i
+        build:
+            dockerfile: Dockerfile.dev
+        container_name: lib-dev-c
+        ports:
+            - "5000:5000"
