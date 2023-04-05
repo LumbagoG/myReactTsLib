@@ -27,6 +27,12 @@ export default defineConfig({
         },
     },
 
+    server: {
+        strictPort: true,
+        port: 5000,
+        host: true,
+    },
+
     // Settings for production
     build: {
         outDir: "build",

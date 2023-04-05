@@ -2,6 +2,9 @@
     "name": "@lumbagog/my-react-ts-lib",
     "description": "My ui library react components",
     "version": "0.0.8",
+    "config": {
+        "port": "5000"
+    },
     "scripts": {
         "lint-prettier": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
         "lint-eslint": "eslint --debug src/**/*.{ts,tsx}",
@@ -12,7 +15,7 @@
         "lib-build": "tsc && vite build",
         "lib-build-preview": "vite preview",
         "pre-commit": "lint-staged",
-        "storybook-dev": "npm run linters && NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 5000",
+        "storybook-dev": "npm run linters && NODE_OPTIONS=--openssl-legacy-provider start-storybook -p $npm_package_config_port",
         "storybook-build": "NODE_OPTIONS=--openssl-legacy-provider build-storybook",
         "storybook-build-preview": "npx http-server storybook-static -p 5005",
         "storybook-deploy": "npx chromatic --project-token=59b7949a76b9 --patch-build=i3...master --build-script-name=storybook-build",
@@ -35,7 +38,9 @@
         "react-dom": "^18.2.0",
         "react-is": "^18.2.0",
         "styled-components": "^5.3.6",
-        "styled-normalize": "^8.0.7"
+        "styled-normalize": "^8.0.7",
+        "cross-env": "^7.0.3",
+        "cross-var": "^1.1.0"
     },
     "devDependencies": {
         "@babel/core": "^7.21.0",
