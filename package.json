@@ -1,7 +1,7 @@
 {
     "name": "@lumbagog/my-react-ts-lib",
     "description": "My ui library react components",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "config": {
         "storybook-port-dev": "5000",
         "storybook-port-prod": "5005"
