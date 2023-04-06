@@ -1,7 +1,11 @@
 {
     "name": "@lumbagog/my-react-ts-lib",
     "description": "My ui library react components",
-    "version": "0.0.8",
+    "version": "0.0.9",
+    "config": {
+        "storybook-port-dev": "5000",
+        "storybook-port-prod": "5005"
+    },
     "scripts": {
         "lint-prettier": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
         "lint-eslint": "eslint --debug src/**/*.{ts,tsx}",
@@ -12,9 +16,10 @@
         "lib-build": "tsc && vite build",
         "lib-build-preview": "vite preview",
         "pre-commit": "lint-staged",
-        "storybook-dev": "npm run linters && NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 5000",
+        "storybook-dev": "npm run linters && NODE_OPTIONS=--openssl-legacy-provider start-storybook -p $npm_package_config_storybook-port-dev",
         "storybook-build": "NODE_OPTIONS=--openssl-legacy-provider build-storybook",
-        "storybook-build-preview": "npx http-server storybook-static -p 5005",
+        "storybook-build-preview": "npx http-server storybook-static -p $npm_package_config_storybook-port-prod",
+        "storybook-deploy": "npx chromatic --project-token=59b7949a76b9 --patch-build=i3...master --build-script-name=storybook-build",
         "prepare": "husky install"
     },
     "husky": {
