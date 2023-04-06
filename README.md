@@ -22,7 +22,7 @@
 
 ## ![](https://raw.githubusercontent.com/LumbagoG/myReactTsLib/38e70934be1a0e46235be07e7e8f9321213cdb37/public/icons/link.svg) Links for app resources:
 
--   [Storybook](https://6405776599109c9529f5c23a-rqpkvgqwyl.chromatic.com/?path=/story)
+-   [Storybook](https://master--6405776599109c9529f5c23a.chromatic.com/?path=/story)
 -   [npm package](https://www.npmjs.com/package/@lumbagog/my-react-ts-lib?activeTab=readme)
 -   [gh package](https://github.com/LumbagoG/myReactTsLib/pkgs/npm/my-react-ts-lib)
 -   [Figma ui design](https://www.figma.com/file/Aq10VUMGoFEoKWoBccdelr/myReactTsLib?node-id=0-1&t=DBCdWMr1eON7Qb1I-0)

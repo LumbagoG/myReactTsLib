@@ -3,10 +3,13 @@ FROM node:alpine
 WORKDIR /lib
 
 COPY package.json .
+RUN chmod +x /entrypoint.sh
 RUN npm i --legacy-peer-deps
 
 COPY . .
 
 EXPOSE "5000:5000"
+
+ENTRYPOINT ["/entrypoint.sh"]
 
 CMD ["npm", "run", "storybook-dev"]
