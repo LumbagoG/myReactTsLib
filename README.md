@@ -31,14 +31,32 @@
 
 ## ![](https://raw.githubusercontent.com/LumbagoG/myReactTsLib/38e70934be1a0e46235be07e7e8f9321213cdb37/public/icons/power.svg) Startup project
 
-### Docker (production)
+### Docker (dev) start container
 
 ```
-docker run -t my-react-ts-lib .
+cd bin/
+./docker.sh dev up
 ```
 
+### Docker (dev) delete container
+
 ```
-docker run -p 80:80 my-react-ts-lib
+cd bin/
+./docker.sh dev down
+```
+
+### Docker (prod) start container
+
+```
+cd bin/
+./docker.sh prod up
+```
+
+### Docker (prod) delete container
+
+```
+cd bin/
+./docker.sh prod down
 ```
 
 ### Local (dev)
